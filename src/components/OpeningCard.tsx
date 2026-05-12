@@ -1,0 +1,151 @@
+"use client";
+
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+
+interface OpeningCardProps {
+  onEnter: () => void;
+}
+
+export default function OpeningCard({ onEnter }: OpeningCardProps) {
+  const [isExiting, setIsExiting] = useState(false);
+
+  const handleEnter = () => {
+    setIsExiting(true);
+    setTimeout(() => {
+      onEnter();
+    }, 1200);
+  };
+
+  return (
+    <AnimatePresence>
+      {!isExiting && (
+        <motion.div
+          className="fixed inset-0 z-[100] flex flex-col items-center justify-center overflow-hidden cursor-pointer"
+          onClick={handleEnter}
+          exit={{ opacity: 0, scale: 1.1 }}
+          transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
+        >
+          {/* Background garden image */}
+          <div className="absolute inset-0">
+            <Image
+              src="/images/hero-garden.png"
+              alt="Garden scene with couple on swing"
+              fill
+              className="object-cover"
+              priority
+            />
+            {/* Gradient overlays for depth */}
+            <div className="absolute inset-0 bg-gradient-to-t from-green-dark/40 via-transparent to-green-deep/20" />
+            <div className="absolute inset-0 bg-gradient-to-b from-cream/10 via-transparent to-green-dark/30" />
+          </div>
+
+          {/* Decorative corner borders */}
+          <div className="absolute top-6 left-6 w-16 h-16 border-t-2 border-l-2 border-gold/60" />
+          <div className="absolute top-6 right-6 w-16 h-16 border-t-2 border-r-2 border-gold/60" />
+          <div className="absolute bottom-6 left-6 w-16 h-16 border-b-2 border-l-2 border-gold/60" />
+          <div className="absolute bottom-6 right-6 w-16 h-16 border-b-2 border-r-2 border-gold/60" />
+
+          {/* Content area */}
+          <div className="relative z-10 flex flex-col items-center px-6 text-center">
+            {/* AK Monogram */}
+            <motion.div
+              className="relative w-36 h-36 sm:w-44 sm:h-44 mb-6"
+              initial={{ scale: 0, rotate: -180, opacity: 0 }}
+              animate={{ scale: 1, rotate: 0, opacity: 1 }}
+              transition={{
+                duration: 2,
+                ease: [0.34, 1.56, 0.64, 1],
+                delay: 0.3,
+              }}
+            >
+              <Image
+                src="/images/ak-monogram.png"
+                alt="AK Monogram"
+                fill
+                className="object-contain drop-shadow-lg"
+              />
+              {/* Glow effect behind monogram */}
+              <div className="absolute inset-0 rounded-full bg-gold/10 blur-2xl scale-150 animate-gentle-pulse" />
+            </motion.div>
+
+            {/* Names */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2, delay: 1.5 }}
+            >
+              <h1
+                className="text-4xl sm:text-5xl md:text-6xl text-navy font-[var(--font-script)] tracking-wide drop-shadow-md"
+                style={{ fontFamily: "var(--font-script)" }}
+              >
+                Kawalpreet
+              </h1>
+              <motion.span
+                className="block text-2xl sm:text-3xl text-gold-gradient my-2"
+                style={{ fontFamily: "var(--font-script)" }}
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 2.2 }}
+              >
+                &
+              </motion.span>
+              <h1
+                className="text-4xl sm:text-5xl md:text-6xl text-navy font-[var(--font-script)] tracking-wide drop-shadow-md"
+                style={{ fontFamily: "var(--font-script)" }}
+              >
+                Avneesh
+              </h1>
+            </motion.div>
+
+            {/* Tagline */}
+            <motion.p
+              className="mt-6 text-sm sm:text-base text-navy/70 tracking-[0.3em] uppercase"
+              style={{ fontFamily: "var(--font-serif-body)" }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 2.8 }}
+            >
+              Request the honour of your presence
+            </motion.p>
+
+            {/* Tap to enter */}
+            <motion.div
+              className="mt-10 flex flex-col items-center"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 3.5 }}
+            >
+              <motion.div
+                className="px-8 py-3 rounded-full border border-gold/60 bg-cream/70 backdrop-blur-sm"
+                animate={{ scale: [1, 1.05, 1] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <span
+                  className="text-sm tracking-[0.25em] text-gold-dark uppercase"
+                  style={{ fontFamily: "var(--font-serif-body)" }}
+                >
+                  Tap to Open
+                </span>
+              </motion.div>
+              <motion.div
+                className="mt-3 w-px h-8 bg-gradient-to-b from-gold/60 to-transparent"
+                animate={{ scaleY: [0.6, 1, 0.6] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              />
+            </motion.div>
+          </div>
+
+          {/* Decorative gold line at bottom */}
+          <motion.div
+            className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent"
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 2, delay: 1 }}
+          />
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+}
