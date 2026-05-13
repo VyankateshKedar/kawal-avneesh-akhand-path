@@ -178,7 +178,7 @@ export default function CountdownFooter() {
           transition={{ duration: 1, delay: 0.5 }}
         >
           <p
-            className="text-navy/40 text-xs tracking-widest uppercase"
+            className="text-navy/90 text-xs font-semibold tracking-widest uppercase"
             style={{ fontFamily: "var(--font-serif-body)" }}
           >
             Made with love
@@ -189,6 +189,31 @@ export default function CountdownFooter() {
           >
             K & A
           </p>
+          <div className="mt-4 flex justify-center gap-2">
+            <div className="w-1 h-1 rounded-full bg-gold/40" />
+            <div className="w-1 h-1 rounded-full bg-gold/60" />
+            <div className="w-1 h-1 rounded-full bg-gold/40" />
+          </div>
+        </motion.div>
+        <motion.div
+          className="mt-12"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          <p
+            className="text-navy/90 text-xs font-bold leading-relaxed tracking-widest uppercase"
+            style={{ fontFamily: "var(--font-serif-body)" }}
+          >
+            Your presence will make our special day even more memorable.
+          </p>
+          {/* <p
+            className="text-lg sm:text-xl text-gold mt-2 animate-shimmer"
+            style={{ fontFamily: "var(--font-script)" }}
+          >
+            K & A
+          </p> */}
           <div className="mt-4 flex justify-center gap-2">
             <div className="w-1 h-1 rounded-full bg-gold/40" />
             <div className="w-1 h-1 rounded-full bg-gold/60" />

@@ -22,19 +22,35 @@ export default function OpeningCard({ onEnter }: OpeningCardProps) {
     <AnimatePresence>
       {!isExiting && (
         <motion.div
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-center overflow-hidden cursor-pointer"
+          className="fixed inset-0 z-[100] flex items-center justify-center overflow-hidden cursor-pointer"
           onClick={handleEnter}
           exit={{ opacity: 0, scale: 1.1 }}
           transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
         >
-          {/* Background garden image */}
-          <div className="absolute inset-0">
+          {/* Background garden image - Mobile version */}
+          <div className="absolute inset-0 md:hidden">
             <Image
-              src="/images/cover.jpeg"
-              alt="Garden scene with couple on swing"
+              src="/images/cover-v1.jpeg"
+              alt="Garden scene with couple on swing - Mobile"
               fill
               className="object-cover"
               priority
+              sizes="100vw"
+            />
+            {/* Gradient overlays for depth */}
+            <div className="absolute inset-0 bg-gradient-to-t from-green-dark/40 via-transparent to-green-deep/20" />
+            <div className="absolute inset-0 bg-gradient-to-b from-cream/10 via-transparent to-green-dark/30" />
+          </div>
+
+          {/* Background garden image - Desktop version */}
+          <div className="absolute inset-0 hidden md:block">
+            <Image
+              src="/images/cover.jpeg"
+              alt="Garden scene with couple on swing - Desktop"
+              fill
+              className="object-cover"
+              priority
+              sizes="100vw"
             />
             {/* Gradient overlays for depth */}
             <div className="absolute inset-0 bg-gradient-to-t from-green-dark/40 via-transparent to-green-deep/20" />
@@ -47,8 +63,8 @@ export default function OpeningCard({ onEnter }: OpeningCardProps) {
           <div className="absolute bottom-6 left-6 w-16 h-16 border-b-2 border-l-2 border-gold/60" />
           <div className="absolute bottom-6 right-6 w-16 h-16 border-b-2 border-r-2 border-gold/60" />
 
-          {/* Content area */}
-          <div className="relative z-10 flex flex-col items-center px-6 text-center">
+          {/* Content area - positioned absolutely at top */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center px-6 text-center max-w-2xl w-full pt-8 sm:pt-12">
             {/* AK Monogram */}
             <motion.div
               className="relative w-36 h-36 sm:w-44 sm:h-44 mb-6"
@@ -101,23 +117,23 @@ export default function OpeningCard({ onEnter }: OpeningCardProps) {
 
             {/* Tagline */}
             <motion.p
-              className="mt-6 text-sm sm:text-base text-navy/70 tracking-[0.3em] uppercase"
+              className="mt-6 text-sm sm:text-base text-white/90 font-bold tracking-[0.3em] uppercase"
               style={{ fontFamily: "var(--font-serif-body)" }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 2.8 }}
             >
-              Request the honour of your presence
+              With the Blessings of Waheguru, we invite you to celebrate the union of our Hearts and Families.
             </motion.p>
 
             {/* Tap to enter */}
             <motion.div
-              className="mt-10 flex flex-col items-center"
+              className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 3.5 }}
             >
-              <motion.div
+            {/* <motion.div
                 className="px-8 py-3 rounded-full border border-gold/60 bg-cream/70 backdrop-blur-sm"
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
@@ -128,7 +144,7 @@ export default function OpeningCard({ onEnter }: OpeningCardProps) {
                 >
                   Tap to Open
                 </span>
-              </motion.div>
+              </motion.div> */}
               <motion.div
                 className="mt-3 w-px h-8 bg-gradient-to-b from-gold/60 to-transparent"
                 animate={{ scaleY: [0.6, 1, 0.6] }}

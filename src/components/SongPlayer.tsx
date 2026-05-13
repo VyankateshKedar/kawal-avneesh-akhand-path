@@ -14,7 +14,7 @@ export default function SongPlayer() {
         loop
         className="hidden"
       >
-        <source src="/music/Kanda Kacheya Ne Daana Paani.mp3" type="audio/mpeg" />
+        <source src="/music/Kanda Kacheya Ne Daana Paani.mp4" type="audio/mpeg" />
       </audio>
 
       {/* Section background */}

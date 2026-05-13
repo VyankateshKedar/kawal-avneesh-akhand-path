@@ -38,7 +38,7 @@ const events: EventCard[] = [
     time: "8:30 PM Onwards",
     followedBy: "Followed by Cocktail & Dinner",
     location: "The Imperial Hall, Corinthians Club, Pune.",
-    image: "/images/cocktail-sangeet.jpeg",
+    image: "/images/cocktail-sangeet v1.jpeg",
     imageAlt: "Glamorous sangeet scene with couple dancing",
     darkOverlay: true,
   },
@@ -50,7 +50,7 @@ const events: EventCard[] = [
     followedBy: "Followed by Lunch",
     location:
       "Gurudwara Guru Nanak Darbar Camp, Pune (Hollywood Gurudwara).",
-    image: "/images/anand-karaj.jpeg",
+    image: "/images/anand-karaj-v1.jpeg",
     imageAlt: "Traditional Sikh wedding ceremony inside Gurudwara",
   },
 ];
@@ -245,7 +245,7 @@ export default function EventItinerary() {
                       </svg>
                     </div>
                     <p
-                      className="text-white/90 text-xs sm:text-sm leading-relaxed"
+                      className="text-white/90 text-sm sm:text-base font-semibold leading-relaxed"
                       style={{ fontFamily: "var(--font-serif-body)" }}
                     >
                       {event.location}
