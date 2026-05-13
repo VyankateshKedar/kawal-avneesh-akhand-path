@@ -30,7 +30,7 @@ export default function OpeningCard({ onEnter }: OpeningCardProps) {
           {/* Background garden image */}
           <div className="absolute inset-0">
             <Image
-              src="/images/hero-garden.png"
+              src="/images/cover.jpeg"
               alt="Garden scene with couple on swing"
               fill
               className="object-cover"
@@ -61,7 +61,7 @@ export default function OpeningCard({ onEnter }: OpeningCardProps) {
               }}
             >
               <Image
-                src="/images/ak-monogram.png"
+                src="/images/AK wedding logo.png"
                 alt="AK Monogram"
                 fill
                 className="object-contain drop-shadow-lg"
@@ -77,8 +77,8 @@ export default function OpeningCard({ onEnter }: OpeningCardProps) {
               transition={{ duration: 1.2, delay: 1.5 }}
             >
               <h1
-                className="text-4xl sm:text-5xl md:text-6xl text-navy font-[var(--font-script)] tracking-wide drop-shadow-md"
-                style={{ fontFamily: "var(--font-script)" }}
+                className="text-4xl sm:text-5xl md:text-6xl text-white font-[var(--font-script)] tracking-wide drop-shadow-lg"
+                style={{ fontFamily: "var(--font-script)", textShadow: "2px 2px 8px rgba(0, 0, 0, 0.6)" }}
               >
                 Kawalpreet
               </h1>
@@ -92,8 +92,8 @@ export default function OpeningCard({ onEnter }: OpeningCardProps) {
                 &
               </motion.span>
               <h1
-                className="text-4xl sm:text-5xl md:text-6xl text-navy font-[var(--font-script)] tracking-wide drop-shadow-md"
-                style={{ fontFamily: "var(--font-script)" }}
+                className="text-4xl sm:text-5xl md:text-6xl text-white font-[var(--font-script)] tracking-wide drop-shadow-lg"
+                style={{ fontFamily: "var(--font-script)", textShadow: "2px 2px 8px rgba(0, 0, 0, 0.6)" }}
               >
                 Avneesh
               </h1>

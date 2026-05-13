@@ -6,7 +6,8 @@ import OpeningCard from "@/components/OpeningCard";
 import PetalOverlay from "@/components/PetalOverlay";
 import InvitationSection from "@/components/InvitationSection";
 import EventItinerary from "@/components/EventItinerary";
-import RSVPSection from "@/components/RSVPSection";
+import SongPlayer from "@/components/SongPlayer";
+// import RSVPSection from "@/components/RSVPSection";
 import CountdownFooter from "@/components/CountdownFooter";
 
 export default function Home() {
@@ -35,6 +36,7 @@ export default function Home() {
               {[
                 { id: "invitation", label: "Invitation" },
                 { id: "events", label: "Events" },
+                { id: "song", label: "Song" },
                 { id: "rsvp", label: "RSVP" },
                 { id: "footer", label: "Countdown" },
               ].map((section) => (
@@ -87,7 +89,23 @@ export default function Home() {
               </div>
             </div>
 
-            <RSVPSection />
+            <SongPlayer />
+
+            {/* Decorative section divider */}
+            <div className="relative h-16 flex items-center justify-center overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-cream via-peach-light/30 to-cream" />
+              <div className="relative flex items-center gap-4">
+                <div className="w-8 sm:w-16 h-px bg-gold/30" />
+                <div className="flex gap-1.5">
+                  <div className="w-1.5 h-1.5 bg-gold/50 rounded-full" />
+                  <div className="w-1.5 h-1.5 bg-gold/70 rounded-full" />
+                  <div className="w-1.5 h-1.5 bg-gold/50 rounded-full" />
+                </div>
+                <div className="w-8 sm:w-16 h-px bg-gold/30" />
+              </div>
+            </div>
+
+            {/* <RSVPSection /> */}
             <CountdownFooter />
           </motion.div>
         )}

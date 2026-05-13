@@ -31,14 +31,14 @@ const events: EventCard[] = [
   },
   {
     id: "sangeet",
-    title: "Sangeet",
+    title: "Cocktail & Sangeet Night",
     subtitle: "Let's dance and groove to the tunes of love celebrating",
     hashtag: "#NeeSHKwalaLove",
     date: "Tuesday, June 9, 2026",
     time: "8:30 PM Onwards",
     followedBy: "Followed by Cocktail & Dinner",
     location: "The Imperial Hall, Corinthians Club, Pune.",
-    image: "/images/sangeet-scene.png",
+    image: "/images/cocktail-sangeet.jpeg",
     imageAlt: "Glamorous sangeet scene with couple dancing",
     darkOverlay: true,
   },
@@ -50,7 +50,7 @@ const events: EventCard[] = [
     followedBy: "Followed by Lunch",
     location:
       "Gurudwara Guru Nanak Darbar Camp, Pune (Hollywood Gurudwara).",
-    image: "/images/anand-karaj-scene.png",
+    image: "/images/anand-karaj.jpeg",
     imageAlt: "Traditional Sikh wedding ceremony inside Gurudwara",
   },
 ];
@@ -111,25 +111,27 @@ export default function EventItinerary() {
             className="relative rounded-2xl overflow-hidden shadow-xl group"
           >
             {/* Card image background */}
-            <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] md:aspect-[16/10]">
+            <div className="relative w-full h-96 sm:h-[450px] md:h-[550px]">
               <Image
                 src={event.image}
                 alt={event.imageAlt}
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 800px"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                priority={false}
               />
               {/* Dark overlay for readability */}
               <div
                 className={`absolute inset-0 ${
                   event.darkOverlay
-                    ? "bg-gradient-to-t from-black/80 via-black/40 to-black/20"
-                    : "bg-gradient-to-t from-navy/80 via-navy/30 to-transparent"
+                    ? "bg-gradient-to-t from-black/50 via-black/20 to-transparent"
+                    : "bg-gradient-to-t from-navy/80 via-navy/40 to-transparent"
                 }`}
               />
 
               {/* Event number badge */}
               <motion.div
-                className="absolute top-4 left-4 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gold/90 backdrop-blur-sm flex items-center justify-center shadow-lg"
+                className="absolute top-4 left-4 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gold/90 backdrop-blur-sm flex items-center justify-center shadow-lg"
                 whileHover={{ scale: 1.1, rotate: 10 }}
               >
                 <span
@@ -141,7 +143,7 @@ export default function EventItinerary() {
               </motion.div>
 
               {/* Content overlay */}
-              <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-8">
+              <div className="absolute inset-0 flex flex-col justify-end p-5 sm:p-8 z-20">
                 {/* Hashtag */}
                 {event.hashtag && (
                   <motion.div

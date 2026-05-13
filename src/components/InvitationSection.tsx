@@ -19,144 +19,129 @@ export default function InvitationSection() {
       <div className="absolute bottom-8 left-4 sm:left-8 text-gold/30 text-4xl sm:text-5xl select-none" style={{ transform: "scaleY(-1)" }}>❦</div>
       <div className="absolute bottom-8 right-4 sm:right-8 text-gold/30 text-4xl sm:text-5xl select-none" style={{ transform: "scale(-1)" }}>❦</div>
 
-      <div className="relative z-10 max-w-2xl mx-auto text-center">
-        {/* Ek Onkar */}
+      <div className="relative z-10 max-w-4xl mx-auto">
+        {/* Header */}
         <motion.div
-          className="mb-6"
-          initial={{ opacity: 0, scale: 0.5 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 0.8 }}
         >
-          <span className="ek-onkar text-5xl sm:text-6xl leading-none block">
+          <span className="ek-onkar text-5xl sm:text-6xl leading-none block mb-3">
             ੴ
           </span>
-          <div className="mt-3 mx-auto w-24 h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
+          <h1
+            className="text-3xl sm:text-4xl md:text-5xl text-navy"
+            style={{ fontFamily: "var(--font-script)" }}
+          >
+            Wedding Invitation
+          </h1>
+          <p
+            className="text-base sm:text-lg text-navy/70 mt-3"
+            style={{ fontFamily: "var(--font-serif-body)" }}
+          >
+            Kawalpreet Kaur & Avneesh Singh
+          </p>
         </motion.div>
 
-        {/* Header text */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        {/* Family Details Section */}
+        {/* <motion.div
+          className="mb-12 bg-white/40 backdrop-blur-sm rounded-xl p-6 sm:p-8 border border-gold/20"
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <p
-            className="text-sm sm:text-base text-navy/70 tracking-wide leading-relaxed uppercase"
-            style={{ fontFamily: "var(--font-serif-body)" }}
+          <h2
+            className="text-2xl sm:text-3xl text-navy mb-6 text-center"
+            style={{ fontFamily: "var(--font-script)" }}
           >
-            With the blessings of the Almighty
-          </p>
-          <p
-            className="text-lg sm:text-xl text-gold-dark mt-1 font-semibold"
-            style={{ fontFamily: "var(--font-serif-display)" }}
-          >
-            Waheguru
-          </p>
-          <p
-            className="text-sm sm:text-base text-navy/60 mt-2 leading-relaxed"
-            style={{ fontFamily: "var(--font-serif-body)" }}
-          >
-            & Heavenly blessings of
-          </p>
-          <p
-            className="text-sm sm:text-base text-navy/80 mt-1 tracking-wide font-medium"
-            style={{ fontFamily: "var(--font-serif-body)" }}
-          >
-            LATE NANAK SINGH MUCHAL & KARTAR KAUR
-          </p>
-        </motion.div>
+            Family Details
+          </h2>
+          <div className="space-y-4 text-navy/80" style={{ fontFamily: "var(--font-serif-body)" }}>
+            <p className="text-base">
+              <span className="font-semibold text-navy">Bride:</span> Kawalpreet Kaur (Daughter of Kulwant Singh & Gurmeet Kaur Muchal)
+            </p>
+            <p className="text-base">
+              <span className="font-semibold text-navy">Groom:</span> Avneesh Singh (Son of Harjeet Singh & Harvinder Kaur Gurudatta, Pune)
+            </p>
+            <p className="text-base">
+              <span className="font-semibold text-navy">Host Family:</span> Muchal Family
+            </p>
+          </div>
+        </motion.div> */}
 
-        {/* Decorative divider */}
-        <motion.div
-          className="my-8 flex items-center justify-center gap-3"
-          initial={{ opacity: 0, scaleX: 0 }}
-          whileInView={{ opacity: 1, scaleX: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          <div className="w-16 sm:w-24 h-px bg-gradient-to-r from-transparent to-gold/60" />
-          <span className="text-gold text-lg">✦</span>
-          <div className="w-16 sm:w-24 h-px bg-gradient-to-l from-transparent to-gold/60" />
-        </motion.div>
-
-        {/* Family invite text */}
-        <motion.p
-          className="text-base sm:text-lg text-navy/80 leading-relaxed italic"
-          style={{ fontFamily: "var(--font-serif-body)", fontWeight: 400 }}
+        {/* Event Schedule Section */}
+        {/* <motion.div
+          className="mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-        >
-          Muchal family cordially invites you to the wedding ceremony of
-        </motion.p>
-
-        {/* Bride */}
-        <motion.div
-          className="mt-10"
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.8, delay: 0.3 }}
         >
           <h2
-            className="text-3xl sm:text-4xl text-navy"
+            className="text-2xl sm:text-3xl text-navy mb-6 text-center"
             style={{ fontFamily: "var(--font-script)" }}
           >
-            Kawalpreet Kaur
+            Event Schedule
           </h2>
-          <p
-            className="text-sm text-navy/60 mt-2"
-            style={{ fontFamily: "var(--font-serif-body)" }}
-          >
-            D/o <span className="font-medium text-navy/80">Kulwant Singh Muchal</span> &{" "}
-            <span className="font-medium text-navy/80">Gurmeet Kaur</span>
-          </p>
-        </motion.div>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm sm:text-base" style={{ fontFamily: "var(--font-serif-body)" }}>
+              <thead>
+                <tr className="border-b-2 border-gold/40">
+                  <th className="px-3 sm:px-4 py-3 text-left font-semibold text-navy">Event</th>
+                  <th className="px-3 sm:px-4 py-3 text-left font-semibold text-navy">Date</th>
+                  <th className="px-3 sm:px-4 py-3 text-left font-semibold text-navy">Time</th>
+                  <th className="px-3 sm:px-4 py-3 text-left font-semibold text-navy">Location</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-gold/20 hover:bg-gold/5 transition">
+                  <td className="px-3 sm:px-4 py-3 font-semibold text-navy">Samapti Shri Akhand Path Sahib Ji</td>
+                  <td className="px-3 sm:px-4 py-3 text-navy/80">Thu, Jun 4, 2026</td>
+                  <td className="px-3 sm:px-4 py-3 text-navy/80">12:00 PM – 1:30 PM</td>
+                  <td className="px-3 sm:px-4 py-3 text-navy/80">Gurudwara Shri Guru Tegh Bahadur Langar Sahib, Chh. Sambhajinagar (Aurangabad)</td>
+                </tr>
+                <tr className="border-b border-gold/20 hover:bg-gold/5 transition">
+                  <td className="px-3 sm:px-4 py-3 font-semibold text-navy">Celebration (#NeeSHKwalaLove)</td>
+                  <td className="px-3 sm:px-4 py-3 text-navy/80">Tue, Jun 9, 2026</td>
+                  <td className="px-3 sm:px-4 py-3 text-navy/80">8:30 PM Onwards</td>
+                  <td className="px-3 sm:px-4 py-3 text-navy/80">The Imperial Hall, Corinthians Club, Pune</td>
+                </tr>
+                <tr className="border-b border-gold/20 hover:bg-gold/5 transition">
+                  <td className="px-3 sm:px-4 py-3 font-semibold text-navy">Anand Karaj</td>
+                  <td className="px-3 sm:px-4 py-3 text-navy/80">Wed, Jun 10, 2026</td>
+                  <td className="px-3 sm:px-4 py-3 text-navy/80">1:00 PM Onwards</td>
+                  <td className="px-3 sm:px-4 py-3 text-navy/80">Guru Nanak Darbar (Hollywood Gurudwara) Camp, Pune</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </motion.div> */}
 
-        {/* & symbol */}
-        <motion.div
-          className="my-6"
-          initial={{ opacity: 0, scale: 0 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-        >
-          <span
-            className="text-4xl sm:text-5xl text-gold-gradient inline-block"
-            style={{ fontFamily: "var(--font-script)" }}
-          >
-            &
-          </span>
-        </motion.div>
-
-        {/* Groom */}
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.9 }}
+        {/* Additional Information Section */}
+        {/* <motion.div
+          className="bg-white/40 backdrop-blur-sm rounded-xl p-6 sm:p-8 border border-gold/20"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.8, delay: 0.4 }}
         >
           <h2
-            className="text-3xl sm:text-4xl text-navy"
+            className="text-2xl sm:text-3xl text-navy mb-6 text-center"
             style={{ fontFamily: "var(--font-script)" }}
           >
-            Avneesh Singh
+            Additional Information
           </h2>
-          <p
-            className="text-sm text-navy/60 mt-2"
-            style={{ fontFamily: "var(--font-serif-body)" }}
-          >
-            S/o <span className="font-medium text-navy/80">Harjeet Singh Gurudatta</span> &{" "}
-            <span className="font-medium text-navy/80">Harvinder Kaur</span>
-          </p>
-          <p
-            className="text-xs text-gold-dark mt-1 tracking-widest uppercase"
-            style={{ fontFamily: "var(--font-serif-body)" }}
-          >
-            Pune
-          </p>
+          <div className="space-y-3 text-navy/80" style={{ fontFamily: "var(--font-serif-body)" }}>
+            <p className="text-base">
+              <span className="font-semibold text-navy">Wedding Hashtag:</span> #NeeSHKwalaLove
+            </p>
+            <p className="text-base">
+              <span className="font-semibold text-navy">Officiating (Anand Karaj):</span> Bhai Surinderpal Singh Ji (Raipurwale)
+            </p>
+          </div>
         </motion.div>
 
         {/* Bottom ornament */}
@@ -165,7 +150,7 @@ export default function InvitationSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 1 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
         >
           <div className="w-12 h-px bg-gold/40" />
           <div className="mx-3 w-2 h-2 bg-gold/60 rounded-full" />
