@@ -14,14 +14,14 @@ export default function SongPlayer() {
         loop
         className="hidden"
       >
-        <source src="/music/Kanda Kacheya Ne Daana Paani.mp4" type="audio/mpeg" />
+        <source src="/music/Kanda Kacheya Ne Daana Paani.mp3" type="audio/mpeg" />
       </audio>
 
-      {/* Section background */}
+      {/* Section background
       <div className="absolute inset-0 bg-gradient-to-b from-cream via-peach-light/20 to-cream" />
 
       {/* Section header */}
-      <motion.div
+      {/* <motion.div
         className="relative z-10 text-center mb-12 sm:mb-16"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -45,10 +45,10 @@ export default function SongPlayer() {
           <span className="text-gold text-sm">♪ ♪ ♪</span>
           <div className="w-12 sm:w-20 h-px bg-gradient-to-l from-transparent to-gold/50" />
         </div>
-      </motion.div>
+      </motion.div> */}
 
       {/* Decorative music note icon */}
-      <motion.div
+      {/* <motion.div
         className="relative z-10 flex justify-center"
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -64,15 +64,15 @@ export default function SongPlayer() {
           >
             <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm-2 13.5v-9l6 4.5-6 4.5z" />
           </svg>
-        </div>
+        </div> */}
 
         {/* Decorative elements */}
-        <div className="absolute -top-4 -left-4 w-24 h-24 bg-gold/10 rounded-full blur-3xl" />
+        {/* <div className="absolute -top-4 -left-4 w-24 h-24 bg-gold/10 rounded-full blur-3xl" />
         <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-peach-light/10 rounded-full blur-3xl" />
-      </motion.div>
+      </motion.div> */}
 
       {/* Quote below */}
-      <motion.div
+      {/* <motion.div
         className="relative z-10 text-center mt-12 sm:mt-16 px-6"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -91,7 +91,7 @@ export default function SongPlayer() {
         >
           The perfect melody for our celebration
         </p>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 }
