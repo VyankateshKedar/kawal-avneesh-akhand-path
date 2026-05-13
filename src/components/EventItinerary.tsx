@@ -108,7 +108,7 @@ export default function EventItinerary() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
-            className="relative rounded-2xl overflow-hidden shadow-xl group"
+            className="relative rounded-2xl overflow-hidden group"
           >
             {/* Card image background */}
             <div className="relative w-full h-96 sm:h-[450px] md:h-[550px]">
@@ -131,7 +131,7 @@ export default function EventItinerary() {
 
               {/* Event number badge */}
               <motion.div
-                className="absolute top-4 left-4 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gold/90 backdrop-blur-sm flex items-center justify-center shadow-lg"
+                className="absolute top-4 left-4 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gold/90 flex items-center justify-center shadow-lg"
                 whileHover={{ scale: 1.1, rotate: 10 }}
               >
                 <span
@@ -153,7 +153,7 @@ export default function EventItinerary() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.3 }}
                   >
-                    <span className="inline-block px-4 py-1.5 rounded-full bg-gold/20 backdrop-blur-sm border border-gold/30 text-gold-light text-xs sm:text-sm tracking-wide">
+                    <span className="inline-block px-4 py-1.5 rounded-full bg-gold/20 border border-gold/30 text-gold-light text-xs sm:text-sm tracking-wide">
                       {event.hashtag}
                     </span>
                   </motion.div>
@@ -178,7 +178,7 @@ export default function EventItinerary() {
                 </h3>
 
                 {/* Glass info card */}
-                <div className="bg-white/15 backdrop-blur-md rounded-xl p-4 sm:p-5 border border-white/20 space-y-3">
+                <div className="bg-white/15 rounded-xl p-4 sm:p-5 border border-white/20 space-y-3">
                   {/* Date & Time */}
                   <div className="flex items-start gap-3">
                     <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-gold/20 flex items-center justify-center mt-0.5">
