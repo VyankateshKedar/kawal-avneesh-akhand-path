@@ -57,7 +57,7 @@ export default function RevealDate() {
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          Save The Date
+          Reveal The Date
         </motion.p>
 
         {/* Main date - Professional serif font */}

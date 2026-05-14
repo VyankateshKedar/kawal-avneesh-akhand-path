@@ -93,7 +93,7 @@ export default function OpeningCard({ onEnter }: OpeningCardProps) {
               transition={{ duration: 1.2, delay: 1.5 }}
             >
               <h1
-                className="text-base sm:text-lg md:text-2xl text-white font-[var(--font-script)] tracking-wide drop-shadow-lg"
+                className="text-sm sm:text-lg md:text-lg text-white font-[var(--font-script)] tracking-wide drop-shadow-lg"
                 style={{ fontFamily: "var(--font-script)", textShadow: "2px 2px 8px rgba(0, 0, 0, 0.6)" }}
               >
                 Kawalpreet
@@ -108,7 +108,7 @@ export default function OpeningCard({ onEnter }: OpeningCardProps) {
                 &
               </motion.span>
               <h1
-                className="text-base sm:text-lg md:text-2xl text-white font-[var(--font-script)] tracking-wide drop-shadow-lg"
+                className="text-sm sm:text-lg md:text-lg text-white font-[var(--font-script)] tracking-wide drop-shadow-lg"
                 style={{ fontFamily: "var(--font-script)", textShadow: "2px 2px 8px rgba(0, 0, 0, 0.6)" }}
               >
                 Avneesh

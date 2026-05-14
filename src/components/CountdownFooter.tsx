@@ -187,7 +187,7 @@ export default function CountdownFooter() {
             className="text-lg sm:text-xl text-gold mt-2 animate-shimmer"
             style={{ fontFamily: "var(--font-script)" }}
           >
-            K & A
+            KawalPreet & Avneesh
           </p>
           <div className="mt-4 flex justify-center gap-2">
             <div className="w-1 h-1 rounded-full bg-gold/40" />
