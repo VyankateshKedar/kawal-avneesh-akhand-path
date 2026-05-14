@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import OpeningCard from "@/components/OpeningCard";
 import PetalOverlay from "@/components/PetalOverlay";
 import InvitationSection from "@/components/InvitationSection";
+import RevealDate from "@/components/RevealDate";
 import EventItinerary from "@/components/EventItinerary";
 import SongPlayer from "@/components/SongPlayer";
 // import RSVPSection from "@/components/RSVPSection";
@@ -35,6 +36,7 @@ export default function Home() {
             <nav className="fixed right-3 top-1/2 -translate-y-1/2 z-50 hidden sm:flex flex-col gap-3">
               {[
                 { id: "invitation", label: "Invitation" },
+                { id: "reveal-date", label: "Date Reveal" },
                 { id: "events", label: "Events" },
                 { id: "song", label: "Song" },
                 { id: "rsvp", label: "RSVP" },
@@ -59,19 +61,7 @@ export default function Home() {
             {/* Sections */}
             <InvitationSection />
 
-            {/* Decorative section divider */}
-            <div className="relative h-16 flex items-center justify-center overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-cream via-green-soft/30 to-cream" />
-              <div className="relative flex items-center gap-4">
-                <div className="w-8 sm:w-16 h-px bg-gold/30" />
-                <div className="flex gap-1.5">
-                  <div className="w-1.5 h-1.5 bg-gold/50 rounded-full" />
-                  <div className="w-1.5 h-1.5 bg-gold/70 rounded-full" />
-                  <div className="w-1.5 h-1.5 bg-gold/50 rounded-full" />
-                </div>
-                <div className="w-8 sm:w-16 h-px bg-gold/30" />
-              </div>
-            </div>
+            <RevealDate />
 
             <EventItinerary />
 

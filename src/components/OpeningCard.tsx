@@ -100,7 +100,7 @@ export default function OpeningCard({ onEnter }: OpeningCardProps) {
               </h1>
               <motion.span
                 className="block text-2xl sm:text-3xl text-gold-gradient my-2"
-                style={{ fontFamily: "var(--font-script)" }}
+                style={{ fontFamily: "var(--font-serif-body)" }}
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 2.2 }}
@@ -117,7 +117,7 @@ export default function OpeningCard({ onEnter }: OpeningCardProps) {
 
             {/* Tagline */}
             <motion.p
-              className="mt-6 text-sm sm:text-base text-white/90 font-bold tracking-[0.3em] uppercase"
+              className="mt-6 text-xs sm:text-sm text-white/90 font-bold tracking-[0.3em] uppercase"
               style={{ fontFamily: "var(--font-serif-body)" }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -126,14 +126,14 @@ export default function OpeningCard({ onEnter }: OpeningCardProps) {
               With the Blessings of Waheguru, we invite you to celebrate the union of our Hearts and Families.
             </motion.p>
 
-            {/* Tap to enter */}
+            {/* Tap to enter - Below tagline */}
             <motion.div
-              className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center"
+              className="mt-12 flex flex-col items-center z-20"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 3.5 }}
             >
-            {/* <motion.div
+              <motion.div
                 className="px-8 py-3 rounded-full border border-gold/60 bg-cream/70 backdrop-blur-sm"
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
@@ -144,7 +144,7 @@ export default function OpeningCard({ onEnter }: OpeningCardProps) {
                 >
                   Tap to Open
                 </span>
-              </motion.div> */}
+              </motion.div>
               <motion.div
                 className="mt-3 w-px h-8 bg-gradient-to-b from-gold/60 to-transparent"
                 animate={{ scaleY: [0.6, 1, 0.6] }}

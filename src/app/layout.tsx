@@ -41,6 +41,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${playfair.variable} ${cormorant.variable} ${greatVibes.variable} h-full antialiased`}
+      style={{ "--font-cream-cake": '"Cream Cake"' } as React.CSSProperties}
     >
       <head>
         <link
