@@ -114,7 +114,7 @@ export default function RevealDate() {
           transition={{ duration: 0.8, delay: 0.7 }}
           viewport={{ once: true }}
         >
-          Request the honour of your presence as we celebrate the union of our hearts in the blessings of Waheguru
+          Let’s celebrate the beautiful beginning of our forever together.
         </motion.p>
 
         {/* Location badge - Professional style */}
@@ -125,14 +125,14 @@ export default function RevealDate() {
           transition={{ duration: 0.8, delay: 0.8 }}
           viewport={{ once: true }}
         >
-          <div className="px-8 py-4 border border-gold/40 rounded-lg bg-white/40 backdrop-blur-sm">
+          {/* <div className="px-8 py-4 border border-gold/40 rounded-lg bg-white/40 backdrop-blur-sm">
             <p
               className="text-sm tracking-[0.15em] text-gold-dark uppercase"
               style={{ fontFamily: "var(--font-serif-body)" }}
             >
               📍 Pune, India
             </p>
-          </div>
+          </div> */}
         </motion.div>
 
         {/* Bottom decorative element */}

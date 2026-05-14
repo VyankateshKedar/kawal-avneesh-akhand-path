@@ -37,12 +37,12 @@ export default function InvitationSection() {
           >
             Wedding Invitation
           </h1>
-          <p
+          {/* <p
             className="text-base sm:text-lg text-navy/70 mt-3"
             style={{ fontFamily: "var(--font-serif-body)" }}
           >
             Kawalpreet Kaur & Avneesh Singh
-          </p>
+          </p> */}
         </motion.div>
 
         {/* Family Details Section */}

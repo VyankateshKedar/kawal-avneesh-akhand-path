@@ -66,7 +66,7 @@ export default function Home() {
             <EventItinerary />
 
             {/* Decorative section divider */}
-            <div className="relative h-16 flex items-center justify-center overflow-hidden">
+            {/* <div className="relative h-16 flex items-center justify-center overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-cream via-peach-light/30 to-cream" />
               <div className="relative flex items-center gap-4">
                 <div className="w-8 sm:w-16 h-px bg-gold/30" />
@@ -77,12 +77,11 @@ export default function Home() {
                 </div>
                 <div className="w-8 sm:w-16 h-px bg-gold/30" />
               </div>
-            </div>
+            </div> */}
 
-            <SongPlayer />
 
             {/* Decorative section divider */}
-            <div className="relative h-16 flex items-center justify-center overflow-hidden">
+            {/* <div className="relative h-16 flex items-center justify-center overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-cream via-peach-light/30 to-cream" />
               <div className="relative flex items-center gap-4">
                 <div className="w-8 sm:w-16 h-px bg-gold/30" />
@@ -93,10 +92,11 @@ export default function Home() {
                 </div>
                 <div className="w-8 sm:w-16 h-px bg-gold/30" />
               </div>
-            </div>
+            </div> */}
 
             {/* <RSVPSection /> */}
             <CountdownFooter />
+             <SongPlayer />
           </motion.div>
         )}
       </AnimatePresence>

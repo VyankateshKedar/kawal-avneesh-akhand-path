@@ -46,7 +46,7 @@ const events: EventCard[] = [
     id: "anand-karaj",
     title: "Anand Karaj",
     date: "Wednesday, June 10, 2026",
-    time: "Baraat Swagat: 12:00 PM | Anand Karaj: 1:00 PM",
+    time: "Anand Karaj: 1:00 PM",
     followedBy: "Followed by Lunch",
     location:
       "Gurudwara Guru Nanak Darbar Camp, Pune (Hollywood Gurudwara).",
@@ -79,12 +79,12 @@ export default function EventItinerary() {
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.8 }}
       >
-        <span
+        {/* <span
           className="text-sm tracking-[0.3em] text-gold-dark uppercase"
           style={{ fontFamily: "var(--font-serif-body)" }}
         >
           Save the Dates
-        </span>
+        </span> */}
         <h2
           className="text-3xl sm:text-4xl md:text-5xl text-navy mt-3"
           style={{ fontFamily: "var(--font-script)" }}
