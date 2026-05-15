@@ -42,17 +42,17 @@ const events: EventCard[] = [
   //   imageAlt: "Glamorous sangeet scene with couple dancing",
   //   darkOverlay: true,
   // },
-  // {
-  //   id: "anand-karaj",
-  //   title: "Anand Karaj",
-  //   date: "Wednesday, June 10, 2026",
-  //   time: "Anand Karaj: 1:00 PM",
-  //   followedBy: "Followed by Lunch",
-  //   location:
-  //     "Gurudwara Guru Nanak Darbar Camp, Pune (Hollywood Gurudwara).",
-  //   image: "/images/anand-karaj-v1.jpeg",
-  //   imageAlt: "Traditional Sikh wedding ceremony inside Gurudwara",
-  // },
+  {
+    id: "anand-karaj",
+    title: "Anand Karaj",
+    date: "Wednesday, June 10, 2026",
+    time: "Anand Karaj: 1:00 PM",
+    followedBy: "Followed by Lunch",
+    location:
+      "Gurudwara Guru Nanak Darbar Camp, Pune (Hollywood Gurudwara).",
+    image: "/images/anand-karaj-v1.jpeg",
+    imageAlt: "Traditional Sikh wedding ceremony inside Gurudwara",
+  },
 ];
 
 const cardVariants = {
